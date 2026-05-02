@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top 5 Spenders</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #EBDDFB, #F3EAF4);
+            padding: 40px;
+            color: #4A2050;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5C1A59;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 60%;
+            background-color: #D7BCE8;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #7B2CBF;
+            color: #ffffff;
+        }
+
+        td {
+            background-color: #f0e7f8;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #e5dbf1;
+        }
+
+        .back-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .back-btn a {
+            text-decoration: none;
+            background-color: #9D4EDD;
+            color: white;
+            padding: 12px 26px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn a:hover {
+            background-color: #7B2CBF;
+        }
+    </style>
+</head>
+<body>
+    <h2>Top 5 Spenders</h2>
+    <table>
+        <tr>
+            <th>Student ID</th>
+            <th>Total Amount</th>
+        </tr>
+        {% for student_id, total_amount in top_spenders %}
+        <tr>
+            <td>{{ student_id|int }}</td>
+            <td>{{ total_amount }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="back-btn">
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>

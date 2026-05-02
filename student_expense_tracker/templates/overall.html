@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Overall Expense Stats</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #EBDDFB, #F3EAF4);
+            padding: 40px;
+            color: #4A2050;
+        }
+
+        h1 {
+            text-align: center;
+            color: #7B2CBF;
+            font-size: 42px;
+        }
+
+        p {
+            font-size: 20px;
+            padding: 14px 20px;
+            margin: 16px auto;
+            width: fit-content;
+            background: #D7BCE8;
+            border-left: 8px solid #B388EB;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .back-btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .back-btn a {
+            text-decoration: none;
+            background-color: #B388EB;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn a:hover {
+            background-color: #9D4EDD;
+        }
+    </style>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Overall Expense Summary</h1>
+    <p><strong>Total Students:</strong> {{ total_students }}</p>
+    <p><strong>Total Expense:</strong> ₹{{ total_expense }}</p>
+    <p><strong>Average Expense:</strong> ₹{{ avg_expense }}</p>
+    <p><strong>Total Male Expense:</strong> ₹{{ male_expense }}</p>
+    <p><strong>Total Female Expense:</strong> ₹{{ female_expense }}</p>
+
+    <div class="back-btn">
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>

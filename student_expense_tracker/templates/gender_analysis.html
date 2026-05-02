@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gender-wise Expense Analysis</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #EBDDFB, #F3EAF4);
+            padding: 40px;
+            color: #4A2050;
+        }
+
+        h1 {
+            color:#5C1A59;
+            margin-bottom: 40px;
+            text-align: center; /* Center the heading */
+        }
+
+        img {
+            width: 70%;
+            max-width: 800px;
+            margin: 30px auto;
+            display: block;
+            border: 4px solid #ecf0f1;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .back-btn {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center; /* Center the button horizontally */
+        }
+
+        .back-btn a {
+            text-decoration: none;
+            background-color: #B388EB;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn a:hover {
+            background-color: #9D4EDD;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gender-wise Expense Analysis</h1>
+    <img src="{{ url_for('static', filename='images/category_bar.png') }}" alt="Category-wise Expense">
+    <img src="{{ url_for('static', filename='images/male_pie.png') }}" alt="Male Expense Pie">
+    <img src="{{ url_for('static', filename='images/female_pie.png') }}" alt="Female Expense Pie">
+    <img src="{{ url_for('static', filename='images/age_group_bar.png') }}" alt="Age Group Comparison">
+    <img src="{{ url_for('static', filename='images/monthly_trend.png') }}" alt="Monthly Expense Trend">
+
+    <div class="back-btn">
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>

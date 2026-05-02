@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category-wise Expense Trends</title>
+    <style>
+       body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #EBDDFB, #F3EAF4);
+            padding: 40px;
+            color: #4A2050;
+        }
+
+        h1 {
+            text-align: center;
+            color: #7B2CBF;
+            font-size: 36px;
+        }
+
+        img {
+            display: block;
+            width: 80%;
+            max-width: 800px;
+            margin: 40px auto;
+            border: 4px solid #e6dcf5; /* light lavender border */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            border-radius: 12px;
+        }
+
+        .back-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+       .back-btn a {
+            text-decoration: none;
+            background-color: #B388EB;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-btn a:hover {
+            background-color: #9D4EDD;
+        }
+    </style>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Category-wise Expense Trends</h1>
+
+    <img src="{{ url_for('static', filename='category_expense_trend.png') }}" alt="Category Expense Trend">
+
+    <div class="back-btn">
+        <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+</body>
+</html>
